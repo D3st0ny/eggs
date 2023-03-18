@@ -1,0 +1,56 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2023-03-18T20:23:03+03:00",
+    "name": "Java",
+    "author": "me@destony.dev",
+    "description": "Java runner",
+    "features": [
+        "eula",
+        "java_version",
+        "pid_limit"
+    ],
+    "docker_images": {
+        "Java 8": "ghcr.io\/d3st0ny\/yolks:java_8",
+        "Java 8j9": "ghcr.io\/d3st0ny\/yolks:java_8j9",
+        "Java 11": "ghcr.io\/d3st0ny\/yolks:java_11",
+        "Java 11j9": "ghcr.io\/d3st0ny\/yolks:java_11j9",
+        "Java 16": "ghcr.io\/d3st0ny\/yolks:java_16",
+        "Java 17": "ghcr.io\/d3st0ny\/yolks:java_17",
+        "Java 17j9": "ghcr.io\/d3st0ny\/yolks:java_17j9",
+        "Java 18": "ghcr.io\/d3st0ny\/yolks:java_18",
+        "Java 18j9": "ghcr.io\/d3st0ny\/yolks:java_18j9",
+        "Java 19": "ghcr.io\/d3st0ny\/yolks:java_19",
+        "Java 20": "ghcr.io\/d3st0ny\/yolks:java_20"
+    },
+    "file_denylist": [],
+    "startup": "{{CMD}}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": [\r\n        \")! For help, type \",\r\n        \"Jenkins is fully up and running\",\r\n        \"INFO | Done\"   \r\n    ]\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "ghcr.io\/d3st0ny\/installers:alpine",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Run Command",
+            "description": "Start anything",
+            "env_variable": "CMD",
+            "default_value": "java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar  server.jar",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string",
+            "field_type": "text"
+        }
+    ]
+}

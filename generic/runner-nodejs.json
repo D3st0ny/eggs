@@ -1,0 +1,44 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2023-01-27T20:19:13+01:00",
+    "name": "Nodejs",
+    "author": "me@destony.dev",
+    "description": "Nodejs runner",
+    "features": null,
+    "docker_images": {
+        "Nodejs 18": "ghcr.io\/d3st0ny\/yolks:nodejs_18",
+        "Nodejs 17": "ghcr.io\/d3st0ny\/yolks:nodejs_17",
+        "Nodejs 16": "ghcr.io\/d3st0ny\/yolks:nodejs_16"
+    },
+    "file_denylist": [],
+    "startup": "{{CMD}}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"change this\"\r\n}",
+        "logs": "{}",
+        "stop": "^^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "ghcr.io\/d3st0ny\/installers:alpine",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Run Command",
+            "description": "Start anything",
+            "env_variable": "CMD",
+            "default_value": "/bin/bash",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string",
+            "field_type": "text"
+        }
+    ]
+}
