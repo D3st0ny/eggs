@@ -15,7 +15,7 @@
         "Nodejs 16": "ghcr.io\/d3st0ny\/yolks:nodejs_16"
     },
     "file_denylist": [],
-    "startup": "{{CMD}}",
+    "startup": "./start.sh",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"change this\"\r\n}",
@@ -24,21 +24,10 @@
     },
     "scripts": {
         "installation": {
-            "script": null,
+            "script": "mkdir -p \/mnt\/server\r\ncd \/mnt\/server\r\n\r\ntouch start.sh\r\nchmod +x start.sh\r\n\r\nexport HOME=\/mnt\/server\r\necho -e \"install complete\"\r\nexit 0",
             "container": "ghcr.io\/d3st0ny\/installers:alpine",
-            "entrypoint": "bash"
+            "entrypoint": "ash"
         }
     },
-    "variables": [
-        {
-            "name": "Run Command",
-            "description": "Start anything",
-            "env_variable": "CMD",
-            "default_value": "/bin/bash",
-            "user_viewable": true,
-            "user_editable": true,
-            "rules": "required|string",
-            "field_type": "text"
-        }
-    ]
+    "variables": []
 }

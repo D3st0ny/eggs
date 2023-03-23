@@ -1,0 +1,31 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2023-01-27T23:37:50-08:00",
+    "name": "Debian",
+    "author": "me@destony.dev",
+    "description": "Debian runner",
+    "features": null,
+    "docker_images": {
+        "Debian": "ghcr.io\/d3st0ny\/yolks:debian"
+    },
+    "file_denylist": [],
+    "startup": "./start.sh",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"change this\"\r\n}",
+        "logs": "{}",
+        "stop": "^^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "mkdir -p \/mnt\/server\r\ncd \/mnt\/server\r\n\r\ntouch start.sh\r\nchmod +x start.sh\r\n\r\nexport HOME=\/mnt\/server\r\necho -e \"install complete\"\r\nexit 0",
+            "container": "ghcr.io\/d3st0ny\/installers:alpine",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": []
+}
